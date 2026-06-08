@@ -1,0 +1,185 @@
+@import "tailwindcss";
+
+/* ============================================================
+   DA VINCI AÊSTHETIC — Sistema visual
+   Paleta lei 70/20/10 · Negro Renascença · Creme Tela · Dourado Florença
+   ============================================================ */
+
+@theme inline {
+  /* Negro Renascença — a noite do Cinquecento (azul-negro) */
+  --color-night: #0a0d13;
+  --color-night-2: #0e131c;
+  --color-night-3: #141a26;
+  --color-night-4: #1d2533;
+
+  /* Creme Tela — substitui o branco, tela de óleo quente */
+  --color-cream: #faf8f3;
+  --color-cream-dim: #ece7db;
+  --color-cream-mute: #b9b3a6;
+
+  /* Dourado Florença */
+  --color-gold: #c9a14c;
+  --color-gold-soft: #e3c77d;
+  --color-gold-deep: #9a7b33;
+
+  /* Acentos neon — uso raríssimo (a aresta street) */
+  --color-neon: #ff2e88;
+  --color-sfumato: #5e8b73;
+
+  /* Neutros do manual */
+  --color-ink: #2a2a2a;
+  --color-stone: #6b6b6b;
+
+  --font-display: var(--font-bodoni), "Bodoni Moda", serif;
+  --font-accent: var(--font-archivo), "Archivo Narrow", sans-serif;
+  --font-body: var(--font-inter), "Inter", system-ui, sans-serif;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-night);
+  color: var(--color-cream);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-night);
+}
+
+/* —— Tipografia utilitária —— */
+.font-display { font-family: var(--font-display); }
+.font-accent { font-family: var(--font-accent); }
+
+.eyebrow {
+  font-family: var(--font-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.42em;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--color-gold);
+}
+
+.display-italic {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 800;
+}
+
+/* —— Linha-régua dourada (divisor renascentista) —— */
+.rule-gold {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-gold) 18%,
+    var(--color-gold) 82%,
+    transparent
+  );
+  opacity: 0.55;
+}
+
+/* —— Textura de tela / craquelado —— */
+.canvas-grain {
+  position: absolute;
+  inset: 0;
+  background-image: url("/brand/grafismos/craquelado-tela-overlay.png");
+  background-size: cover;
+  mix-blend-mode: overlay;
+  opacity: 0.06;
+  pointer-events: none;
+}
+
+.hex-field {
+  background-image: url("/brand/grafismos/malha-hexagonal-tile.png");
+  background-size: 360px;
+  background-repeat: repeat;
+}
+
+/* —— Botões —— */
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--color-gold);
+  color: var(--color-night);
+  font-family: var(--font-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  font-size: 0.78rem;
+  padding: 1.05rem 2rem;
+  border: 1px solid var(--color-gold);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-gold:hover {
+  background: var(--color-gold-soft);
+  border-color: var(--color-gold-soft);
+  box-shadow: 0 0 40px -8px rgba(201, 161, 76, 0.6);
+  transform: translateY(-2px);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: transparent;
+  color: var(--color-cream);
+  font-family: var(--font-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  font-size: 0.78rem;
+  padding: 1.05rem 2rem;
+  border: 1px solid rgba(201, 161, 76, 0.4);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-ghost:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+  transform: translateY(-2px);
+}
+
+/* —— Reveal on scroll —— */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* —— Marquee —— */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: marquee 38s linear infinite;
+}
+
+/* —— Glow lento do hero —— */
+@keyframes breathe {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.05); }
+}
+.breathe { animation: breathe 9s ease-in-out infinite; }
