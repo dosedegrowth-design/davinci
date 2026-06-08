@@ -37,26 +37,27 @@ export function Manifesto() {
       <div className="canvas-grain" />
       <div className="mx-auto grid max-w-[1280px] items-center gap-16 px-5 md:px-10 lg:grid-cols-[1fr_0.85fr]">
         <Reveal>
-          <p className="eyebrow mb-7">— I — Manifesto</p>
+          <p className="eyebrow mb-7">A nossa filosofia</p>
           <h2 className="font-display text-4xl leading-[1.05] sm:text-5xl lg:text-[3.4rem]">
-            Há quinhentos anos, um homem desenhou o corpo dentro do círculo e
-            disse: <span className="display-italic text-[var(--color-gold)]">aqui mora a proporção.</span>
+            Leonardo encontrou no corpo a proporção perfeita. Nós buscamos a mesma
+            harmonia <span className="display-italic text-[var(--color-gold)]">no seu rosto.</span>
           </h2>
           <div className="mt-9 space-y-5 text-[var(--color-cream-dim)] leading-relaxed">
             <p>
-              Cinco séculos depois, continuamos a procurar a mesma coisa — só que
-              agora com ácido hialurônico, toxina botulínica e a leitura precisa
-              de cada milímetro do rosto.
+              Harmonização facial não é "arrumar a boca" ou "levantar o nariz"
+              isolado. É leitura de conjunto — entender cada milímetro do rosto e
+              tratar de forma integrada, com ácido hialurônico, toxina botulínica e
+              bioestimuladores.
             </p>
             <p>
-              Não somos clínica. Não somos consultório. Somos <em className="italic text-cream">atelier</em>,
-              no sentido renascentista da palavra. Lugar onde a anatomia é
-              estudada antes de ser tocada. Onde o resultado é assinado, não
-              terceirizado.
+              Por isso, antes de qualquer procedimento vem o estudo: uma avaliação
+              facial completa que define o seu protocolo. A anatomia é estudada
+              antes de ser tratada — e o resultado é conduzido e assinado pela
+              própria Dra. Ana.
             </p>
             <p className="text-cream">
-              Buscamos a versão de você que já existia — escondida atrás de
-              cansaço, tempo, e do que a vida deixa marcado.
+              O objetivo nunca é o artificial. É revelar a sua beleza natural — a
+              versão de você que o tempo, o cansaço e a rotina deixaram para trás.
             </p>
           </div>
         </Reveal>
@@ -120,15 +121,15 @@ export function Protocolos() {
       <div className="mx-auto max-w-[1280px] px-5 md:px-10">
         <Reveal className="mb-16 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <div className="max-w-xl">
-            <p className="eyebrow mb-5">Protocolos</p>
+            <p className="eyebrow mb-5">Tratamentos</p>
             <h2 className="font-display text-4xl leading-tight sm:text-5xl">
-              Cada serviço é uma <span className="display-italic text-[var(--color-gold)]">leitura</span> — não um item de cardápio.
+              Procedimentos estéticos com <span className="display-italic text-[var(--color-gold)]">leitura de conjunto.</span>
             </h2>
           </div>
           <p className="max-w-sm text-sm leading-relaxed text-[var(--color-cream-mute)]">
-            Modelos validados pelo mercado, aplicados com a assinatura da Dra.
-            Ana. O diagnóstico facial completo vem antes de qualquer
-            intervenção.
+            Técnicas consolidadas e seguras, conduzidas pela Dra. Ana. A
+            avaliação facial completa vem antes de qualquer procedimento — nada
+            de pacote pronto.
           </p>
         </Reveal>
 
@@ -152,7 +153,7 @@ export function Protocolos() {
                 {s.desc}
               </p>
               <span className="mt-6 font-accent text-[0.62rem] uppercase tracking-[0.25em] text-[var(--color-gold)]/0 transition-colors group-hover:text-[var(--color-gold)]">
-                Leitura facial →
+                Saiba mais →
               </span>
             </Reveal>
           ))}
@@ -169,14 +170,14 @@ export function Galeria() {
     <section id="galeria" className="relative bg-[var(--color-night-2)] py-24 md:py-32">
       <div className="mx-auto max-w-[1280px] px-5 md:px-10">
         <Reveal className="mb-14 max-w-2xl">
-          <p className="eyebrow mb-5">Obra-primas · Antes & Depois</p>
+          <p className="eyebrow mb-5">Resultados · Antes & Depois</p>
           <h2 className="font-display text-4xl leading-tight sm:text-5xl">
-            Mesmo crop. Mesma luz. <span className="display-italic text-[var(--color-gold)]">Mesma régua.</span>
+            Naturalidade que se <span className="display-italic text-[var(--color-gold)]">reconhece no espelho.</span>
           </h2>
           <p className="mt-5 text-sm leading-relaxed text-[var(--color-cream-mute)]">
-            Resultados reais, registrados com o mesmo rigor de um estúdio de
-            arte — chiaroscuro, mármore e pele em tom dourado quente. Galeria
-            atualizada após cada captação.
+            Resultados reais de pacientes, registrados com o mesmo padrão de luz
+            e enquadramento. Harmonização facial sem exageros — você, na sua
+            melhor versão. Galeria atualizada a cada novo caso.
           </p>
         </Reveal>
 
@@ -236,7 +237,7 @@ export function Ana() {
         </Reveal>
 
         <Reveal delay={120}>
-          <p className="eyebrow mb-6">A autora</p>
+          <p className="eyebrow mb-6">A especialista</p>
           <h2 className="font-display text-4xl leading-tight sm:text-5xl">
             Dra. Ana Carolina <span className="display-italic text-[var(--color-gold)]">Martins</span>
           </h2>
@@ -246,22 +247,23 @@ export function Ana() {
 
           <blockquote className="mt-9 border-l-2 border-[var(--color-gold)] pl-6">
             <p className="font-display text-2xl italic leading-snug text-cream sm:text-3xl">
-              “Cada rosto pede uma leitura. Antes da agulha, vem o estudo.”
+              “Cada rosto pede uma leitura própria. Antes do procedimento, vem o
+              estudo.”
             </p>
           </blockquote>
 
           <p className="mt-8 max-w-xl leading-relaxed text-[var(--color-cream-dim)]">
-            Repertório técnico sólido e referências validadas pelo mercado.
-            Ana conduz cada protocolo de forma confiante, técnica, curadora e
-            honesta sobre processo e resultado — trabalhando contra o
-            sintético, contra o exagero e contra a pressa.
+            Biomédica esteta com sólida formação técnica em harmonização facial.
+            A Dra. Ana conduz pessoalmente cada avaliação e cada procedimento —
+            com transparência sobre processo, materiais e resultado, sempre a
+            favor da naturalidade.
           </p>
 
           <div className="mt-9 grid max-w-md grid-cols-3 gap-6">
             {[
               { n: "Ciência", l: "Estudo & protocolo" },
               { n: "Registro", l: "Biomédica CRBM" },
-              { n: "Autoria", l: "Resultado assinado" },
+              { n: "Natural", l: "A favor da naturalidade" },
             ].map((c) => (
               <div key={c.n} className="border-t border-[var(--color-gold)]/20 pt-4">
                 <p className="font-display text-lg text-cream">{c.n}</p>
@@ -361,14 +363,14 @@ export function CtaFinal() {
       <div className="breathe absolute left-1/2 top-1/2 h-[60vmin] w-[60vmin] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(201,161,76,0.18),transparent_65%)]" />
       <div className="relative mx-auto max-w-3xl px-5 text-center md:px-10">
         <Reveal>
-          <p className="eyebrow mb-7 justify-center">Comece sua obra-prima</p>
+          <p className="eyebrow mb-7 justify-center">Agende sua avaliação</p>
           <h2 className="font-display text-5xl leading-[1.02] sm:text-6xl lg:text-7xl">
-            Reserve seu <span className="display-italic text-[var(--color-gold)]">atelier.</span>
+            O seu rosto merece um <span className="display-italic text-[var(--color-gold)]">olhar de especialista.</span>
           </h2>
           <p className="mx-auto mt-7 max-w-xl leading-relaxed text-[var(--color-cream-dim)]">
-            A leitura facial é o primeiro passo — sem pressão, sem venda
-            agressiva. Uma conversa técnica sobre o conjunto do seu rosto e o
-            que é possível, de verdade.
+            A avaliação facial é o primeiro passo — sem pressão, sem venda
+            agressiva. Uma conversa técnica sobre o conjunto do seu rosto e o que
+            é possível, de verdade.
           </p>
           <div className="mt-11 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
@@ -377,7 +379,7 @@ export function CtaFinal() {
               rel="noopener noreferrer"
               className="btn-gold justify-center"
             >
-              Agende sua leitura facial
+              Agende sua avaliação facial
             </a>
             <a href={INSTAGRAM} target="_blank" rel="noopener noreferrer" className="btn-ghost justify-center">
               Acompanhe no Instagram
@@ -407,18 +409,18 @@ export function Footer() {
               A Arte do Refinamento.
             </p>
             <p className="mt-4 text-sm leading-relaxed text-[var(--color-cream-mute)]">
-              Atelier de estética avançada. Não competimos com clínicas —
-              competimos com galerias de arte.
+              Clínica de estética avançada e harmonização facial em São Paulo.
+              Realçar a sua beleza natural, com técnica e segurança.
             </p>
           </div>
 
           <div className="grid grid-cols-2 gap-10 sm:grid-cols-3">
             <div>
-              <p className="eyebrow mb-4">Atelier</p>
+              <p className="eyebrow mb-4">Navegação</p>
               <ul className="space-y-2.5 text-sm text-[var(--color-cream-mute)]">
-                <li><a href="#protocolos" className="hover:text-[var(--color-gold)]">Protocolos</a></li>
-                <li><a href="#galeria" className="hover:text-[var(--color-gold)]">Obra-primas</a></li>
-                <li><a href="#ana" className="hover:text-[var(--color-gold)]">A autora</a></li>
+                <li><a href="#protocolos" className="hover:text-[var(--color-gold)]">Tratamentos</a></li>
+                <li><a href="#galeria" className="hover:text-[var(--color-gold)]">Resultados</a></li>
+                <li><a href="#ana" className="hover:text-[var(--color-gold)]">Dra. Ana</a></li>
               </ul>
             </div>
             <div>

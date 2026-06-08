@@ -12,7 +12,7 @@ export default function WhatsAppFab() {
       className="group fixed bottom-6 right-6 z-50 flex items-center gap-3"
     >
       <span className="hidden rounded-full bg-[var(--color-night-3)]/90 px-4 py-2 font-accent text-[0.7rem] uppercase tracking-[0.18em] text-cream shadow-lg backdrop-blur transition-all group-hover:opacity-100 md:block md:opacity-0">
-        Agende sua leitura
+        Agende sua avaliação
       </span>
       <span className="relative flex h-14 w-14 items-center justify-center rounded-full bg-[var(--color-gold)] shadow-[0_8px_30px_-6px_rgba(201,161,76,0.7)] transition-transform group-hover:scale-105">
         <span className="absolute inset-0 animate-ping rounded-full bg-[var(--color-gold)] opacity-20" />

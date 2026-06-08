@@ -7,7 +7,7 @@
 // (o número do planejamento é da coordenação DG, não da Da Vinci)
 export const WHATSAPP_NUMBER = "5511000000000";
 export const WHATSAPP_MSG =
-  "Olá! Gostaria de agendar minha leitura facial na Da Vinci Aesthetic.";
+  "Olá! Gostaria de agendar minha avaliação facial na Da Vinci Aesthetic.";
 export const whatsappHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
   WHATSAPP_MSG
 )}`;
@@ -16,10 +16,10 @@ export const INSTAGRAM = "https://instagram.com/davinci.aesthetic";
 export const INSTAGRAM_HANDLE = "@davinci.aesthetic";
 
 export const NAV = [
-  { label: "Atelier", href: "#atelier" },
-  { label: "Protocolos", href: "#protocolos" },
-  { label: "Obra-primas", href: "#galeria" },
-  { label: "Ana", href: "#ana" },
+  { label: "A Clínica", href: "#atelier" },
+  { label: "Tratamentos", href: "#protocolos" },
+  { label: "Resultados", href: "#galeria" },
+  { label: "Dra. Ana", href: "#ana" },
   { label: "Onde estamos", href: "#pracas" },
 ];
 
@@ -98,8 +98,8 @@ export const DEPOIMENTOS = [
   },
   {
     quote:
-      "A leitura facial mudou tudo. Entendi o porquê de cada ponto antes de qualquer aplicação.",
-    author: "Paciente · Leitura + Preenchimento",
+      "A avaliação facial mudou tudo. Entendi o porquê de cada ponto antes de qualquer aplicação.",
+    author: "Paciente · Avaliação + Preenchimento",
     local: "Conceição",
   },
   {
@@ -124,9 +124,9 @@ export const PRACAS = [
 ];
 
 export const FRASES = [
-  "Antes da agulha, vem o estudo.",
-  "Da medida exata nasce o belo.",
-  "Onde a anatomia vira autoria.",
+  "Realce a sua beleza natural.",
+  "Harmonização facial com leitura de conjunto.",
   "Resultado natural não é sorte. É protocolo.",
-  "Cada rosto é uma encomenda única.",
+  "A proporção áurea aplicada ao seu rosto.",
+  "Antes do procedimento, vem o estudo.",
 ];

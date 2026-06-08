@@ -57,7 +57,7 @@ export default function Header() {
             rel="noopener noreferrer"
             className="hidden btn-gold !px-6 !py-3 sm:inline-flex"
           >
-            Agende sua leitura
+            Agende sua avaliação
           </a>
           <button
             aria-label="Menu"
@@ -110,7 +110,7 @@ export default function Header() {
           onClick={() => setOpen(false)}
           className="btn-gold mt-12 justify-center"
         >
-          Agende sua leitura facial
+          Agende sua avaliação facial
         </a>
       </div>
     </header>

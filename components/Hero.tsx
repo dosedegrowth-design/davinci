@@ -32,21 +32,22 @@ export default function Hero() {
         <div className="max-w-2xl">
           <p className="eyebrow mb-7 flex items-center gap-3">
             <span className="inline-block h-px w-10 bg-[var(--color-gold)]" />
-            Atelier de Estética Avançada · São Paulo
+            Estética Avançada · Harmonização Facial · São Paulo
           </p>
 
-          <h1 className="font-display text-[13vw] leading-[0.92] tracking-tight sm:text-7xl lg:text-[5.2rem]">
-            Antes da agulha,
+          <h1 className="font-display text-[12vw] leading-[0.94] tracking-tight sm:text-7xl lg:text-[5rem]">
+            A arte da
             <br />
             <span className="display-italic text-[var(--color-gold)]">
-              vem o estudo.
+              harmonização facial.
             </span>
           </h1>
 
           <p className="mt-8 max-w-xl text-base leading-relaxed text-[var(--color-cream-dim)] sm:text-lg">
-            Harmonização facial como leitura de conjunto. Leitura facial
-            assinada, protocolo customizado — cada rosto é uma encomenda única.
-            Não competimos com clínicas. Competimos com galerias de arte.
+            Toxina botulínica, preenchimento e bioestimuladores com a precisão da
+            proporção áurea. Um estudo completo do seu rosto antes de qualquer
+            procedimento — para realçar a sua beleza natural, com segurança e sem
+            exageros.
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -56,7 +57,7 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="btn-gold justify-center"
             >
-              Agende sua leitura facial
+              Agende sua avaliação
             </a>
             <a href="#protocolos" className="btn-ghost justify-center">
               Ver protocolos

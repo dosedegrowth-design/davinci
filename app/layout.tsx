@@ -29,11 +29,11 @@ const SITE_URL = "https://davinciestetica.com.br";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Da Vinci Aesthetic · Atelier de Estética Avançada em São Paulo",
+    default: "Da Vinci Aesthetic · Harmonização Facial e Estética Avançada em SP",
     template: "%s · Da Vinci Aesthetic",
   },
   description:
-    "Atelier de harmonização facial em São Paulo. Leitura facial assinada, protocolo customizado — cada rosto é uma encomenda. Dra. Ana Carolina Martins, biomédica esteta.",
+    "Clínica de harmonização facial e estética avançada em São Paulo. Toxina botulínica, preenchimento e bioestimuladores com avaliação facial completa. Dra. Ana Carolina Martins, biomédica esteta.",
   keywords: [
     "harmonização facial São Paulo",
     "preenchimento facial",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     siteName: "Da Vinci Aesthetic",
     title: "Da Vinci Aesthetic · A Arte do Refinamento",
     description:
-      "Harmonização facial como leitura de conjunto. Antes da agulha, vem o estudo.",
+      "Harmonização facial com leitura de conjunto. Realce a sua beleza natural, com técnica e segurança.",
   },
   alternates: { canonical: SITE_URL },
   robots: { index: true, follow: true },
@@ -72,7 +72,7 @@ export default function RootLayout({
     "@type": "MedicalBusiness",
     name: "Da Vinci Aesthetic",
     description:
-      "Atelier de estética avançada e harmonização facial em São Paulo.",
+      "Clínica de estética avançada e harmonização facial em São Paulo.",
     image: `${SITE_URL}/brand/logos/davinci-dourado.png`,
     url: SITE_URL,
     areaServed: ["Conceição", "Santa Cruz", "Vila Mariana", "São Paulo"],
