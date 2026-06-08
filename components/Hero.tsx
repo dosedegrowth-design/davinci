@@ -7,12 +7,12 @@ export default function Hero() {
       id="top"
       className="relative flex min-h-[100svh] items-center overflow-hidden hex-field"
     >
-      {/* fundo: noite renascentista */}
-      <div className="absolute inset-0 bg-[radial-gradient(120%_90%_at_70%_20%,#141a26_0%,#0a0d13_55%)]" />
+      {/* fundo: noite renascentista (Azul Renascença) */}
+      <div className="absolute inset-0 bg-[radial-gradient(120%_90%_at_70%_20%,#2a3858_0%,#1a2438_58%)]" />
       <div className="canvas-grain" />
 
       {/* glow dourado que respira */}
-      <div className="breathe pointer-events-none absolute right-[-10%] top-1/2 h-[70vmin] w-[70vmin] -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(201,161,76,0.28),transparent_62%)]" />
+      <div className="breathe pointer-events-none absolute right-[-10%] top-1/2 h-[70vmin] w-[70vmin] -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(201,169,97,0.30),transparent_62%)]" />
 
       {/* vitruviano */}
       <div className="pointer-events-none absolute right-[2%] top-1/2 hidden h-[78vmin] w-[78vmin] -translate-y-1/2 opacity-[0.5] lg:block">

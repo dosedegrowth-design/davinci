@@ -6,21 +6,21 @@
    ============================================================ */
 
 @theme inline {
-  /* Negro Renascença — a noite do Cinquecento (azul-negro) */
-  --color-night: #0a0d13;
-  --color-night-2: #0e131c;
-  --color-night-3: #141a26;
-  --color-night-4: #1d2533;
+  /* Azul Renascença — a noite do Cinquecento (HEX oficial #1A2438) */
+  --color-night: #1a2438;
+  --color-night-2: #151d2e;
+  --color-night-3: #232f49;
+  --color-night-4: #2f3c5a;
 
-  /* Creme Tela — substitui o branco, tela de óleo quente */
-  --color-cream: #faf8f3;
-  --color-cream-dim: #ece7db;
-  --color-cream-mute: #b9b3a6;
+  /* Creme Tela — substitui o branco, tela de óleo quente (oficial #F4EFE6) */
+  --color-cream: #f4efe6;
+  --color-cream-dim: #e3dccd;
+  --color-cream-mute: #aaa48f;
 
-  /* Dourado Florença */
-  --color-gold: #c9a14c;
-  --color-gold-soft: #e3c77d;
-  --color-gold-deep: #9a7b33;
+  /* Dourado Florença (oficial #C9A961) */
+  --color-gold: #c9a961;
+  --color-gold-soft: #e0c588;
+  --color-gold-deep: #9e8345;
 
   /* Acentos neon — uso raríssimo (a aresta street) */
   --color-neon: #ff2e88;
@@ -33,6 +33,29 @@
   --font-display: var(--font-bodoni), "Bodoni Moda", serif;
   --font-accent: var(--font-archivo), "Archivo Narrow", sans-serif;
   --font-body: var(--font-inter), "Inter", system-ui, sans-serif;
+}
+
+/* —— Respiro em Creme: inverte os tokens no escopo da seção —— */
+/* (utilities usam var(); redefinir aqui troca o tema sem tocar no markup) */
+.theme-light {
+  /* fundos (arbitrary values bg-[var(--color-night*)] usam var() → override pega) */
+  --color-night: #f4efe6;       /* fundo claro */
+  --color-night-2: #ece4d4;     /* seção alternada clara */
+  --color-night-3: #fcfaf5;     /* cards — quase branco quente */
+  --color-night-4: #e6dccb;
+  /* textos via var() (text-[var(--color-cream-*)]) */
+  --color-cream-dim: #434b5e;   /* corpo */
+  --color-cream-mute: #6b6b6b;  /* secundário (neutro do manual) */
+  /* texto base herdado (h2/h3 sem classe de cor) */
+  color: #1a2438;
+}
+/* .text-cream é literal no @theme inline → precisa de override explícito */
+.theme-light .text-cream {
+  color: #1a2438;
+}
+.theme-light .canvas-grain {
+  mix-blend-mode: multiply;
+  opacity: 0.05;
 }
 
 * {

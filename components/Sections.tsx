@@ -64,7 +64,7 @@ export function Manifesto() {
 
         <Reveal delay={150} className="relative mx-auto aspect-square w-full max-w-md">
           <div className="absolute inset-0 rounded-full border border-[var(--color-gold)]/25" />
-          <div className="absolute inset-6 rounded-full bg-[radial-gradient(circle,rgba(201,161,76,0.12),transparent_70%)]" />
+          <div className="absolute inset-6 rounded-full bg-[radial-gradient(circle,rgba(201,169,97,0.12),transparent_70%)]" />
           <Image
             src="/brand/grafismos/selo-vitruviano.png"
             alt="Selo Vitruviano Da Vinci"
@@ -116,8 +116,8 @@ export function Pilares() {
 /* ---------- Protocolos / Serviços ---------- */
 export function Protocolos() {
   return (
-    <section id="protocolos" className="relative overflow-hidden py-24 md:py-32">
-      <div className="absolute right-0 top-1/4 h-[60vmin] w-[60vmin] rounded-full bg-[radial-gradient(circle,rgba(201,161,76,0.07),transparent_70%)]" />
+    <section id="protocolos" className="theme-light relative overflow-hidden bg-[var(--color-night-2)] py-24 md:py-32">
+      <div className="absolute right-0 top-1/4 h-[60vmin] w-[60vmin] rounded-full bg-[radial-gradient(circle,rgba(201,169,97,0.10),transparent_70%)]" />
       <div className="mx-auto max-w-[1280px] px-5 md:px-10">
         <Reveal className="mb-16 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <div className="max-w-xl">
@@ -215,7 +215,7 @@ export function Galeria() {
 /* ---------- Ana ---------- */
 export function Ana() {
   return (
-    <section id="ana" className="relative overflow-hidden py-24 md:py-36">
+    <section id="ana" className="theme-light relative overflow-hidden bg-[var(--color-night)] py-24 md:py-36">
       <div className="canvas-grain" />
       <div className="mx-auto grid max-w-[1280px] items-center gap-14 px-5 md:px-10 lg:grid-cols-[0.85fr_1fr]">
         {/* retrato — placeholder on-brand até a captação */}
@@ -360,7 +360,7 @@ export function CtaFinal() {
   return (
     <section className="relative overflow-hidden py-28 md:py-40">
       <div className="absolute inset-0 hex-field opacity-[0.06]" />
-      <div className="breathe absolute left-1/2 top-1/2 h-[60vmin] w-[60vmin] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(201,161,76,0.18),transparent_65%)]" />
+      <div className="breathe absolute left-1/2 top-1/2 h-[60vmin] w-[60vmin] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(201,169,97,0.18),transparent_65%)]" />
       <div className="relative mx-auto max-w-3xl px-5 text-center md:px-10">
         <Reveal>
           <p className="eyebrow mb-7 justify-center">Agende sua avaliação</p>
