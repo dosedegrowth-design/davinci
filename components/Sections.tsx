@@ -118,8 +118,9 @@ export function Pilares() {
 export function Protocolos() {
   return (
     <section id="protocolos" className="theme-light relative overflow-hidden bg-[var(--color-night-2)] py-24 md:py-32">
+      <div className="pattern-light" />
       <div className="absolute right-0 top-1/4 h-[60vmin] w-[60vmin] rounded-full bg-[radial-gradient(circle,rgba(201,169,97,0.10),transparent_70%)]" />
-      <div className="mx-auto max-w-[1280px] px-5 md:px-10">
+      <div className="relative z-10 mx-auto max-w-[1280px] px-5 md:px-10">
         <Reveal className="mb-16 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <div className="max-w-xl">
             <p className="eyebrow mb-5">Tratamentos</p>
@@ -218,8 +219,9 @@ export function Galeria() {
 export function Ana() {
   return (
     <section id="ana" className="theme-light relative overflow-hidden bg-[var(--color-night)] py-24 md:py-36">
+      <div className="pattern-light" />
       <div className="canvas-grain" />
-      <div className="mx-auto grid max-w-[1280px] items-center gap-14 px-5 md:px-10 lg:grid-cols-[0.85fr_1fr]">
+      <div className="relative z-10 mx-auto grid max-w-[1280px] items-center gap-14 px-5 md:px-10 lg:grid-cols-[0.85fr_1fr]">
         {/* retrato - placeholder on-brand até a captação */}
         <Reveal className="relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-sm border border-[var(--color-gold)]/25 bg-[var(--color-night-3)]">
           <div className="hex-field absolute inset-0 opacity-30" />

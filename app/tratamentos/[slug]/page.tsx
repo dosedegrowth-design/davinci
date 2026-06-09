@@ -103,8 +103,9 @@ export default async function TratamentoPage({
         </section>
 
         {/* Corpo — respiro claro */}
-        <section className="theme-light bg-[var(--color-night)] py-20 md:py-28">
-          <div className="mx-auto grid max-w-[1280px] gap-14 px-5 md:px-10 lg:grid-cols-[1.1fr_0.9fr]">
+        <section className="theme-light relative overflow-hidden bg-[var(--color-night)] py-20 md:py-28">
+          <div className="pattern-light" />
+          <div className="relative z-10 mx-auto grid max-w-[1280px] gap-14 px-5 md:px-10 lg:grid-cols-[1.1fr_0.9fr]">
             {/* Texto + como funciona */}
             <Reveal>
               <div className="space-y-5 text-[var(--color-cream-dim)] leading-relaxed">
