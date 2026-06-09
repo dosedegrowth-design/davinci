@@ -203,22 +203,15 @@ export function Ana() {
       <div className="pattern-light" />
       <div className="canvas-grain" />
       <div className="relative z-10 mx-auto grid max-w-[1280px] items-center gap-14 px-5 md:px-10 lg:grid-cols-[0.85fr_1fr]">
-        {/* retrato - placeholder on-brand até a captação */}
-        <Reveal className="relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-sm border border-[var(--color-gold)]/25 bg-[var(--color-night-3)]">
-          <div className="hex-field absolute inset-0 opacity-30" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-night)] via-transparent to-transparent" />
-          <div className="relative flex h-full flex-col items-center justify-center gap-4 p-8 text-center">
-            <Image
-              src="/brand/logos/monograma-dv.png"
-              alt=""
-              width={120}
-              height={120}
-              className="opacity-70"
-            />
-            <p className="font-accent text-[0.6rem] uppercase tracking-[0.3em] text-[var(--color-cream-mute)]">
-              Retrato · captação profissional
-            </p>
-          </div>
+        {/* retrato Dra. Ana */}
+        <Reveal className="relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-sm border border-[var(--color-gold)]/30 shadow-xl">
+          <Image
+            src="/equipe/dra-ana.jpg"
+            alt="Dra. Ana Carolina Martins, biomédica esteta"
+            fill
+            sizes="(max-width:1024px) 90vw, 400px"
+            className="object-cover"
+          />
         </Reveal>
 
         <Reveal delay={120}>
