@@ -1,26 +1,19 @@
 import type { Metadata } from "next";
-import { Bodoni_Moda, Archivo_Narrow, Inter } from "next/font/google";
+import { Cormorant_Garamond, Jost } from "next/font/google";
 import "./globals.css";
 
-const bodoni = Bodoni_Moda({
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["300", "400", "500", "600", "700"],
   style: ["normal", "italic"],
-  variable: "--font-bodoni",
+  variable: "--font-cormorant",
   display: "swap",
 });
 
-const archivo = Archivo_Narrow({
+const jost = Jost({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-archivo",
-  display: "swap",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  variable: "--font-inter",
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-jost",
   display: "swap",
 });
 
@@ -91,7 +84,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="pt-BR" className={`${bodoni.variable} ${archivo.variable} ${inter.variable}`}>
+    <html lang="pt-BR" className={`${cormorant.variable} ${jost.variable}`}>
       <body>
         <script
           type="application/ld+json"
