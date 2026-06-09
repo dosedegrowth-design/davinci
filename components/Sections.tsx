@@ -336,10 +336,19 @@ export function Pracas() {
 /* ---------- CTA final ---------- */
 export function CtaFinal() {
   return (
-    <section className="relative overflow-hidden py-28 md:py-40">
-      <div className="absolute inset-0 hex-field opacity-[0.06]" />
-      <div className="breathe absolute left-1/2 top-1/2 h-[60vmin] w-[60vmin] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(201,169,97,0.18),transparent_65%)]" />
-      <div className="relative mx-auto max-w-3xl px-5 text-center md:px-10">
+    <section className="relative overflow-hidden bg-[var(--color-night-2)] py-28 md:py-44">
+      {/* aurora dourada girando */}
+      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[120vmin] w-[120vmin] rounded-full opacity-70 blur-[60px] aurora" />
+      {/* pattern Monalisa com drift */}
+      <div className="pointer-events-none absolute inset-0 hex-field pattern-drift opacity-[0.10]" />
+      {/* glows que respiram */}
+      <div className="breathe pointer-events-none absolute left-1/2 top-1/2 h-[70vmin] w-[70vmin] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(201,169,97,0.20),transparent_62%)]" />
+      <div className="pointer-events-none absolute left-[18%] top-[26%] h-[26vmin] w-[26vmin] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(201,169,97,0.16),transparent_60%)] [animation:float-y_11s_ease-in-out_infinite]" />
+      {/* régua dourada superior */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[var(--color-gold)]/40 to-transparent" />
+      {/* vinheta p/ contraste do texto */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_30%,var(--color-night-2)_85%)]" />
+      <div className="relative z-10 mx-auto max-w-3xl px-5 text-center md:px-10">
         <Reveal>
           <p className="eyebrow mb-7 justify-center">Agende sua avaliação</p>
           <h2 className="font-display text-5xl leading-[1.02] sm:text-6xl lg:text-7xl">

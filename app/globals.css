@@ -245,3 +245,38 @@ body {
   50% { opacity: 0.6; transform: scale(1.05); }
 }
 .breathe { animation: breathe 9s ease-in-out infinite; }
+
+/* —— Aurora dourada girando (fundo de seção) —— */
+@keyframes spin-slow {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+.aurora {
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    rgba(201, 169, 97, 0.22) 60deg,
+    transparent 140deg,
+    transparent 220deg,
+    rgba(201, 169, 97, 0.16) 300deg,
+    transparent 360deg
+  );
+  animation: spin-slow 42s linear infinite;
+}
+
+/* —— Drift sutil do pattern —— */
+@keyframes drift {
+  from { background-position: 0 0; }
+  to { background-position: 640px 320px; }
+}
+.pattern-drift { animation: drift 60s linear infinite; }
+
+/* —— Float suave —— */
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aurora, .pattern-drift, .breathe { animation: none; }
+}

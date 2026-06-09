@@ -15,14 +15,14 @@ export default function Hero() {
 
       {/* marca: Gioconda animada (vídeo). Fundo já vem no Azul Renascença (queimado
           no MP4), sem preto. Máscara radial dissolve as bordas no gradiente do hero. */}
-      <div className="pointer-events-none absolute inset-y-0 right-[1vw] hidden items-center lg:flex">
+      <div className="pointer-events-none absolute right-[7vw] top-1/2 hidden -translate-y-1/2 lg:block">
         <video
           autoPlay
           muted
           loop
           playsInline
           poster="/brand/video/davinci-hero-poster.jpg"
-          className="h-[86vmin] w-[86vmin] object-contain [mask-image:radial-gradient(farthest-side_at_center,#000_90%,transparent_100%)] [-webkit-mask-image:radial-gradient(farthest-side_at_center,#000_90%,transparent_100%)]"
+          className="h-[72vmin] w-[72vmin] object-contain [mask-image:radial-gradient(farthest-side_at_center,#000_90%,transparent_100%)] [-webkit-mask-image:radial-gradient(farthest-side_at_center,#000_90%,transparent_100%)]"
         >
           <source src="/brand/video/davinci-hero.mp4" type="video/mp4" />
         </video>
