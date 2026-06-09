@@ -257,6 +257,66 @@ export function Ana() {
   );
 }
 
+/* ---------- Cofundadores ---------- */
+export function Cofundadores() {
+  const founders = [
+    {
+      ini: "A",
+      role: "Direção Clínica",
+      name: "Dra. Ana Carolina Martins",
+      cargo: "Biomédica Esteta · CRBM",
+      bio: "Conduz pessoalmente cada avaliação e cada procedimento. É a autoridade técnica e o resultado assinado da Da Vinci.",
+    },
+    {
+      ini: "R",
+      role: "Sócio-fundador",
+      name: "Renan",
+      cargo: "Administrativo e Comercial",
+      bio: "Responsável pela gestão, pela estrutura e pela experiência de atendimento — o alicerce que sustenta o cuidado clínico do dia a dia.",
+    },
+  ];
+  return (
+    <section id="cofundadores" className="relative overflow-hidden bg-[var(--color-night)] py-20 md:py-28">
+      <div className="pointer-events-none absolute inset-0 hex-field opacity-[0.05]" />
+      <div className="relative z-10 mx-auto max-w-[1280px] px-5 md:px-10">
+        <Reveal className="mb-12 max-w-2xl">
+          <p className="eyebrow mb-5">Cofundadores</p>
+          <h2 className="font-display text-4xl leading-tight sm:text-5xl">
+            Duas frentes, <span className="display-italic text-[var(--color-gold)]">um mesmo cuidado.</span>
+          </h2>
+          <p className="mt-5 text-sm leading-relaxed text-[var(--color-cream-mute)]">
+            A Da Vinci nasce da união entre o rigor clínico e uma gestão dedicada à experiência de cada paciente. Cada um no seu papel.
+          </p>
+        </Reveal>
+
+        <div className="grid gap-6 md:grid-cols-2">
+          {founders.map((f, i) => (
+            <Reveal
+              key={f.name}
+              delay={i * 100}
+              className="flex gap-5 rounded-sm border border-[var(--color-gold)]/15 bg-[var(--color-night-2)] p-7 md:p-8"
+            >
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-[var(--color-gold)]/40 font-display text-2xl text-[var(--color-gold)]">
+                {f.ini}
+              </div>
+              <div>
+                <p className="eyebrow">{f.role}</p>
+                <h3 className="mt-1.5 font-display text-2xl text-cream">{f.name}</h3>
+                <p className="mt-1 font-accent text-[0.6rem] uppercase tracking-[0.2em] text-[var(--color-cream-mute)]">
+                  {f.cargo}
+                </p>
+                <p className="mt-3 text-sm leading-relaxed text-[var(--color-cream-dim)]">
+                  {f.bio}
+                </p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ---------- Depoimentos ---------- */
 export function Depoimentos() {
   return (

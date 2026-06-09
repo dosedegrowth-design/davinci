@@ -8,6 +8,7 @@ import {
   Protocolos,
   Galeria,
   Ana,
+  Cofundadores,
   Depoimentos,
   Pracas,
   CtaFinal,
@@ -26,6 +27,7 @@ export default function Home() {
         <Protocolos />
         <Galeria />
         <Ana />
+        <Cofundadores />
         <Depoimentos />
         <Pracas />
         <CtaFinal />
