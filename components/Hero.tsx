@@ -13,8 +13,8 @@ export default function Hero() {
       {/* glow dourado que respira */}
       <div className="breathe pointer-events-none absolute right-[-10%] top-1/2 h-[70vmin] w-[70vmin] -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(201,169,97,0.30),transparent_62%)]" />
 
-      {/* marca: Gioconda animada (vídeo). Fundo preto some com mix-blend-screen.
-          Sem transform no container: transform criaria stacking context e quebraria o blend. */}
+      {/* marca: Gioconda animada (vídeo). Fundo já vem no Azul Renascença (queimado
+          no MP4), sem preto. Máscara radial dissolve as bordas no gradiente do hero. */}
       <div className="pointer-events-none absolute inset-y-0 right-[1vw] hidden items-center lg:flex">
         <video
           autoPlay
@@ -22,7 +22,7 @@ export default function Hero() {
           loop
           playsInline
           poster="/brand/video/davinci-hero-poster.jpg"
-          className="h-[86vmin] w-[86vmin] object-contain mix-blend-screen"
+          className="h-[86vmin] w-[86vmin] object-contain [mask-image:radial-gradient(farthest-side_at_center,#000_90%,transparent_100%)] [-webkit-mask-image:radial-gradient(farthest-side_at_center,#000_90%,transparent_100%)]"
         >
           <source src="/brand/video/davinci-hero.mp4" type="video/mp4" />
         </video>
