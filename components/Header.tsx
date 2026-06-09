@@ -20,7 +20,8 @@ export default function Header() {
   }, [open]);
 
   return (
-    <header
+    <>
+      <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled
           ? "bg-[var(--color-night)]/85 backdrop-blur-md border-b border-[var(--color-gold)]/15 py-3"
@@ -102,37 +103,59 @@ export default function Header() {
           </button>
         </div>
       </div>
+      </header>
 
-      {/* Mobile drawer */}
+      {/* Mobile drawer — FORA do header (senão fica preso no stacking context do backdrop-blur) */}
       <div
-        className={`fixed inset-0 top-0 z-40 flex flex-col bg-[var(--color-night)] px-8 pt-28 transition-all duration-500 lg:hidden ${
+        className={`fixed inset-0 z-[60] flex flex-col bg-[#0e1626] px-7 pb-12 pt-6 transition-opacity duration-300 lg:hidden ${
           open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
         }`}
       >
-        <nav className="flex flex-col gap-7">
+        <div className="hex-field pointer-events-none absolute inset-0 opacity-[0.05]" />
+
+        <div className="relative flex items-center justify-between">
+          <Image
+            src="/brand/logos/davinci-cream.png"
+            alt="Da Vinci Aesthetic"
+            width={150}
+            height={40}
+            className="h-8 w-auto object-contain"
+          />
+          <button
+            onClick={() => setOpen(false)}
+            aria-label="Fechar menu"
+            className="flex h-10 w-10 items-center justify-center text-[var(--color-gold)]"
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+              <path d="M6 6l12 12M18 6L6 18" />
+            </svg>
+          </button>
+        </div>
+
+        <nav className="relative mt-14 flex flex-col gap-6">
           {NAV.map((item, i) => (
             <a
               key={item.href}
               href={item.href}
               onClick={() => setOpen(false)}
               className="font-display text-3xl text-cream"
-              style={{ transitionDelay: `${i * 40}ms` }}
             >
               <span className="eyebrow mr-3 align-middle">0{i + 1}</span>
               {item.label}
             </a>
           ))}
         </nav>
+
         <a
           href={whatsappHref}
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => setOpen(false)}
-          className="btn-gold mt-12 justify-center"
+          className="btn-gold relative mt-auto justify-center"
         >
           Agende sua avaliação facial
         </a>
       </div>
-    </header>
+    </>
   );
 }

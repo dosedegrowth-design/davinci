@@ -65,17 +65,17 @@ export default function Hero() {
           </div>
 
           {/* régua de números */}
-          <div className="mt-16 grid max-w-lg grid-cols-3 gap-6 border-t border-[var(--color-gold)]/20 pt-7">
+          <div className="mt-12 grid max-w-lg grid-cols-3 gap-4 border-t border-[var(--color-gold)]/20 pt-6 sm:mt-16 sm:gap-6 sm:pt-7">
             {[
               { n: "φ 1.618", l: "Proporção áurea" },
               { n: "100%", l: "Protocolo assinado" },
               { n: "2", l: "Endereços em SP" },
             ].map((s) => (
               <div key={s.l}>
-                <p className="font-display text-2xl text-cream sm:text-3xl">
+                <p className="font-display text-xl text-cream sm:text-3xl">
                   {s.n}
                 </p>
-                <p className="mt-1 font-accent text-[0.62rem] uppercase tracking-[0.22em] text-[var(--color-cream-mute)]">
+                <p className="mt-1.5 font-accent text-[0.5rem] uppercase leading-[1.5] tracking-[0.12em] text-[var(--color-cream-mute)] sm:text-[0.62rem] sm:tracking-[0.22em]">
                   {s.l}
                 </p>
               </div>
