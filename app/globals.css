@@ -122,9 +122,10 @@ body {
   pointer-events: none;
 }
 
+/* Pattern proprietário: Gioconda em linha (substitui malha genérica) */
 .hex-field {
-  background-image: url("/brand/grafismos/malha-hexagonal-tile.png");
-  background-size: 360px;
+  background-image: url("/brand/grafismos/pattern-monalisa.png");
+  background-size: 640px;
   background-repeat: repeat;
 }
 

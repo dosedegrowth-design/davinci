@@ -28,7 +28,7 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-[1280px] items-center justify-between px-5 md:px-10">
-        <a href="#top" className="relative block h-9 w-[150px] shrink-0">
+        <a href="/" className="relative block h-9 w-[150px] shrink-0">
           <Image
             src="/brand/logos/davinci-cream.png"
             alt="Da Vinci Aesthetic"

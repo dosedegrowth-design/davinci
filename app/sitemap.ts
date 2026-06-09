@@ -1,12 +1,17 @@
 import type { MetadataRoute } from "next";
+import { PROTOCOLOS } from "@/lib/content";
+
+const BASE = "https://davinciestetica.com.br";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const last = new Date("2026-06-09");
   return [
-    {
-      url: "https://davinciestetica.com.br",
-      lastModified: new Date("2026-06-08"),
-      changeFrequency: "monthly",
-      priority: 1,
-    },
+    { url: BASE, lastModified: last, changeFrequency: "monthly", priority: 1 },
+    ...PROTOCOLOS.map((p) => ({
+      url: `${BASE}/tratamentos/${p.slug}`,
+      lastModified: last,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })),
   ];
 }

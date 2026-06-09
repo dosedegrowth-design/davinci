@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Reveal from "./Reveal";
 import {
   PILARES,
@@ -135,26 +136,27 @@ export function Protocolos() {
 
         <div className="grid gap-px overflow-hidden bg-[var(--color-gold)]/12 sm:grid-cols-2 lg:grid-cols-4">
           {PROTOCOLOS.map((s, i) => (
-            <Reveal
-              key={s.title}
-              delay={(i % 4) * 80}
-              className="group relative flex flex-col bg-[var(--color-night)] p-8 transition-colors duration-500 hover:bg-[var(--color-night-3)]"
-            >
-              <div className="relative mb-6 h-12 w-12">
-                <Image
-                  src={`/brand/icones/${s.icon}-dourado.png`}
-                  alt={s.title}
-                  fill
-                  className="object-contain object-left transition-transform duration-500 group-hover:scale-110"
-                />
-              </div>
-              <h3 className="font-display text-xl text-cream">{s.title}</h3>
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-[var(--color-cream-mute)]">
-                {s.desc}
-              </p>
-              <span className="mt-6 font-accent text-[0.62rem] uppercase tracking-[0.25em] text-[var(--color-gold)]/0 transition-colors group-hover:text-[var(--color-gold)]">
-                Saiba mais →
-              </span>
+            <Reveal key={s.slug} delay={(i % 4) * 80} className="bg-[var(--color-night)]">
+              <Link
+                href={`/tratamentos/${s.slug}`}
+                className="group relative flex h-full flex-col p-8 transition-colors duration-500 hover:bg-[var(--color-night-3)]"
+              >
+                <div className="relative mb-6 h-12 w-12">
+                  <Image
+                    src={`/brand/icones/${s.icon}-dourado.png`}
+                    alt={s.title}
+                    fill
+                    className="object-contain object-left transition-transform duration-500 group-hover:scale-110"
+                  />
+                </div>
+                <h3 className="font-display text-xl text-cream">{s.title}</h3>
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-[var(--color-cream-mute)]">
+                  {s.desc}
+                </p>
+                <span className="mt-6 font-accent text-[0.62rem] uppercase tracking-[0.25em] text-[var(--color-gold)] opacity-60 transition-opacity group-hover:opacity-100">
+                  Ver tratamento →
+                </span>
+              </Link>
             </Reveal>
           ))}
         </div>
