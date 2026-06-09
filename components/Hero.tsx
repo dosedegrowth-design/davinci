@@ -14,19 +14,16 @@ export default function Hero() {
       {/* glow dourado que respira */}
       <div className="breathe pointer-events-none absolute right-[-10%] top-1/2 h-[70vmin] w-[70vmin] -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(201,169,97,0.30),transparent_62%)]" />
 
-      {/* vitruviano */}
-      <div className="pointer-events-none absolute right-[2%] top-1/2 hidden h-[78vmin] w-[78vmin] -translate-y-1/2 opacity-[0.5] lg:block">
+      {/* marca: Gioconda (logo vertical oficial) */}
+      <div className="pointer-events-none absolute right-[3%] top-1/2 hidden h-[82vmin] w-[58vmin] -translate-y-1/2 lg:block">
         <Image
-          src="/brand/decorativos/vitruviano-completo.png"
-          alt=""
+          src="/brand/logos/davinci-vertical-gioconda.png"
+          alt="Da Vinci Aesthetic"
           fill
           priority
           className="object-contain"
         />
       </div>
-
-      {/* aresta neon (street) */}
-      <div className="pointer-events-none absolute left-0 top-0 h-full w-[1px] bg-gradient-to-b from-transparent via-[var(--color-neon)]/40 to-transparent" />
 
       <div className="relative z-10 mx-auto w-full max-w-[1280px] px-5 pt-28 md:px-10">
         <div className="max-w-2xl">
@@ -46,7 +43,7 @@ export default function Hero() {
           <p className="mt-8 max-w-xl text-base leading-relaxed text-[var(--color-cream-dim)] sm:text-lg">
             Toxina botulínica, preenchimento e bioestimuladores com a precisão da
             proporção áurea. Um estudo completo do seu rosto antes de qualquer
-            procedimento — para realçar a sua beleza natural, com segurança e sem
+            procedimento. Tudo para realçar a sua beleza natural, com segurança e sem
             exageros.
           </p>
 

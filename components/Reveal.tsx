@@ -21,7 +21,7 @@ export default function Reveal({
     if (!el) return;
 
     // Sem animação quando o usuário pede menos movimento, quando a aba não está
-    // visível (rAF/IO ficam pausados) ou quando IO não existe — mostra direto.
+    // visível (rAF/IO ficam pausados) ou quando IO não existe - mostra direto.
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduce || document.visibilityState !== "visible" || !("IntersectionObserver" in window)) {
       setShown(true);

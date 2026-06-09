@@ -45,18 +45,18 @@ export function Manifesto() {
           <div className="mt-9 space-y-5 text-[var(--color-cream-dim)] leading-relaxed">
             <p>
               Harmonização facial não é "arrumar a boca" ou "levantar o nariz"
-              isolado. É leitura de conjunto — entender cada milímetro do rosto e
+              isolado. É leitura de conjunto: entender cada milímetro do rosto e
               tratar de forma integrada, com ácido hialurônico, toxina botulínica e
               bioestimuladores.
             </p>
             <p>
               Por isso, antes de qualquer procedimento vem o estudo: uma avaliação
               facial completa que define o seu protocolo. A anatomia é estudada
-              antes de ser tratada — e o resultado é conduzido e assinado pela
+              antes de ser tratada, e o resultado é conduzido e assinado pela
               própria Dra. Ana.
             </p>
             <p className="text-cream">
-              O objetivo nunca é o artificial. É revelar a sua beleza natural — a
+              O objetivo nunca é o artificial. É revelar a sua beleza natural, a
               versão de você que o tempo, o cansaço e a rotina deixaram para trás.
             </p>
           </div>
@@ -128,7 +128,7 @@ export function Protocolos() {
           </div>
           <p className="max-w-sm text-sm leading-relaxed text-[var(--color-cream-mute)]">
             Técnicas consolidadas e seguras, conduzidas pela Dra. Ana. A
-            avaliação facial completa vem antes de qualquer procedimento — nada
+            avaliação facial completa vem antes de qualquer procedimento. Nada
             de pacote pronto.
           </p>
         </Reveal>
@@ -176,7 +176,7 @@ export function Galeria() {
           </h2>
           <p className="mt-5 text-sm leading-relaxed text-[var(--color-cream-mute)]">
             Resultados reais de pacientes, registrados com o mesmo padrão de luz
-            e enquadramento. Harmonização facial sem exageros — você, na sua
+            e enquadramento. Harmonização facial sem exageros: você, na sua
             melhor versão. Galeria atualizada a cada novo caso.
           </p>
         </Reveal>
@@ -218,7 +218,7 @@ export function Ana() {
     <section id="ana" className="theme-light relative overflow-hidden bg-[var(--color-night)] py-24 md:py-36">
       <div className="canvas-grain" />
       <div className="mx-auto grid max-w-[1280px] items-center gap-14 px-5 md:px-10 lg:grid-cols-[0.85fr_1fr]">
-        {/* retrato — placeholder on-brand até a captação */}
+        {/* retrato - placeholder on-brand até a captação */}
         <Reveal className="relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-sm border border-[var(--color-gold)]/25 bg-[var(--color-night-3)]">
           <div className="hex-field absolute inset-0 opacity-30" />
           <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-night)] via-transparent to-transparent" />
@@ -254,7 +254,7 @@ export function Ana() {
 
           <p className="mt-8 max-w-xl leading-relaxed text-[var(--color-cream-dim)]">
             Biomédica esteta com sólida formação técnica em harmonização facial.
-            A Dra. Ana conduz pessoalmente cada avaliação e cada procedimento —
+            A Dra. Ana conduz pessoalmente cada avaliação e cada procedimento,
             com transparência sobre processo, materiais e resultado, sempre a
             favor da naturalidade.
           </p>
@@ -368,7 +368,7 @@ export function CtaFinal() {
             O seu rosto merece um <span className="display-italic text-[var(--color-gold)]">olhar de especialista.</span>
           </h2>
           <p className="mx-auto mt-7 max-w-xl leading-relaxed text-[var(--color-cream-dim)]">
-            A avaliação facial é o primeiro passo — sem pressão, sem venda
+            A avaliação facial é o primeiro passo, sem pressão e sem venda
             agressiva. Uma conversa técnica sobre o conjunto do seu rosto e o que
             é possível, de verdade.
           </p>

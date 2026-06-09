@@ -1,5 +1,5 @@
 // ============================================================
-// Da Vinci Aesthetic — conteúdo central da marca
+// Da Vinci Aesthetic - conteúdo central da marca
 // Fonte: Brand Manual Vol.01 + Planejamento Estratégico DG
 // ============================================================
 
@@ -37,7 +37,7 @@ export const PILARES = [
   {
     n: "iii",
     title: "Resultado",
-    body: "Antes e depois real, naturalidade e longevidade. O conjunto do rosto — nunca a parte isolada.",
+    body: "Antes e depois real, naturalidade e longevidade. O conjunto do rosto, nunca a parte isolada.",
   },
   {
     n: "iv",
@@ -50,7 +50,7 @@ export const PROTOCOLOS = [
   {
     icon: "icone-01-harmonizacao-facial",
     title: "Harmonização Facial",
-    desc: "Leitura de conjunto. Recuperar o contorno e a proporção do rosto — sem parecer feita.",
+    desc: "Leitura de conjunto. Recuperar o contorno e a proporção do rosto, sem parecer feita.",
   },
   {
     icon: "icone-02-toxina-botulinica",
@@ -92,7 +92,7 @@ export const PROTOCOLOS = [
 export const DEPOIMENTOS = [
   {
     quote:
-      "Eu queria me reconhecer no espelho de novo — e foi exatamente o que aconteceu. Natural, sem exagero.",
+      "Eu queria me reconhecer no espelho de novo, e foi exatamente o que aconteceu. Natural, sem exagero.",
     author: "Paciente · Harmonização Facial",
     local: "Vila Mariana",
   },
