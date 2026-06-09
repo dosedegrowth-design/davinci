@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "./Reveal";
+import ResultadosCarousel from "./ResultadosCarousel";
 import {
   PILARES,
   PROTOCOLOS,
@@ -166,51 +167,31 @@ export function Protocolos() {
   );
 }
 
-/* ---------- Galeria obra-primas (antes/depois) ---------- */
+/* ---------- Galeria de resultados (carrossel coverflow) ---------- */
 export function Galeria() {
-  const posts = ["post-01", "post-04", "post-07", "post-02", "post-05", "post-08"];
   return (
-    <section id="galeria" className="relative bg-[var(--color-night-2)] py-24 md:py-32">
-      <div className="mx-auto max-w-[1280px] px-5 md:px-10">
-        <Reveal className="mb-14 max-w-2xl">
+    <section id="galeria" className="relative overflow-hidden bg-[var(--color-night-2)] py-24 md:py-32">
+      <div className="mx-auto mb-12 max-w-[1280px] px-5 md:mb-16 md:px-10">
+        <Reveal className="max-w-2xl">
           <p className="eyebrow mb-5">Resultados · Antes & Depois</p>
           <h2 className="font-display text-4xl leading-tight sm:text-5xl">
             Naturalidade que se <span className="display-italic text-[var(--color-gold)]">reconhece no espelho.</span>
           </h2>
           <p className="mt-5 text-sm leading-relaxed text-[var(--color-cream-mute)]">
-            Resultados reais de pacientes, registrados com o mesmo padrão de luz
-            e enquadramento. Harmonização facial sem exageros: você, na sua
-            melhor versão. Galeria atualizada a cada novo caso.
+            Resultados reais de pacientes, com autorização. Harmonização facial,
+            preenchimento e rinomodelação sem exageros: você, na sua melhor
+            versão. Arraste para ver mais casos.
           </p>
         </Reveal>
-
-        <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
-          {posts.map((p, i) => (
-            <Reveal
-              key={p}
-              delay={(i % 3) * 80}
-              className="group relative aspect-[4/5] overflow-hidden rounded-sm border border-[var(--color-gold)]/15"
-            >
-              <Image
-                src={`/aplicacoes/instagram/${p}.png`}
-                alt="Obra-prima Da Vinci Aesthetic"
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-night)]/70 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-              <span className="absolute bottom-4 left-4 font-accent text-[0.6rem] uppercase tracking-[0.25em] text-cream opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                @ cliente · com autorização
-              </span>
-            </Reveal>
-          ))}
-        </div>
-
-        <Reveal className="mt-10 flex justify-center">
-          <a href={INSTAGRAM} target="_blank" rel="noopener noreferrer" className="btn-ghost">
-            Ver mais no Instagram · {INSTAGRAM_HANDLE}
-          </a>
-        </Reveal>
       </div>
+
+      <ResultadosCarousel />
+
+      <Reveal className="mt-14 flex justify-center px-5">
+        <a href={INSTAGRAM} target="_blank" rel="noopener noreferrer" className="btn-ghost">
+          Ver mais no Instagram · {INSTAGRAM_HANDLE}
+        </a>
+      </Reveal>
     </section>
   );
 }

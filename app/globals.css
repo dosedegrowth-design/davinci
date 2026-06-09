@@ -205,6 +205,29 @@ body {
   html { scroll-behavior: auto; }
 }
 
+/* —— Coverflow (carrossel de resultados) —— */
+.coverflow {
+  --cardw: 74vw;
+  --gap: 14px;
+  --step: calc(var(--cardw) + var(--gap));
+}
+@media (min-width: 768px) {
+  .coverflow {
+    --cardw: 33vw;
+    --gap: 22px;
+  }
+}
+@media (min-width: 1100px) {
+  .coverflow {
+    --cardw: 25vw;
+    --gap: 26px;
+  }
+}
+.coverflow-card {
+  width: var(--cardw);
+  margin: 0 calc(var(--gap) / 2);
+}
+
 /* —— Marquee —— */
 @keyframes marquee {
   from { transform: translateX(0); }
