@@ -261,14 +261,14 @@ export function Ana() {
 export function Cofundadores() {
   const founders = [
     {
-      ini: "A",
+      img: "/equipe/ana-avatar.jpg",
       role: "Direção Clínica",
       name: "Dra. Ana Carolina Martins",
       cargo: "Biomédica Esteta · CRBM",
       bio: "Conduz pessoalmente cada avaliação e cada procedimento. É a autoridade técnica e o resultado assinado da Da Vinci.",
     },
     {
-      ini: "R",
+      img: "/equipe/renan.jpg",
       role: "Sócio-fundador",
       name: "Renan",
       cargo: "Administrativo e Comercial",
@@ -296,8 +296,14 @@ export function Cofundadores() {
               delay={i * 100}
               className="flex gap-5 rounded-sm border border-[var(--color-gold)]/15 bg-[var(--color-night-2)] p-7 md:p-8"
             >
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-[var(--color-gold)]/40 font-display text-2xl text-[var(--color-gold)]">
-                {f.ini}
+              <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full border border-[var(--color-gold)]/40">
+                <Image
+                  src={f.img}
+                  alt={f.name}
+                  fill
+                  sizes="80px"
+                  className="object-cover"
+                />
               </div>
               <div>
                 <p className="eyebrow">{f.role}</p>
