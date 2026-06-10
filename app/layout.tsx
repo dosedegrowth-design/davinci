@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Jost } from "next/font/google";
 import "./globals.css";
+import { SITE_URL, OG_IMAGE, clinicJsonLd, websiteJsonLd } from "@/lib/seo";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -17,38 +18,54 @@ const jost = Jost({
   display: "swap",
 });
 
-const SITE_URL = "https://davinciestetica.com.br";
-
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Da Vinci Aesthetic · Harmonização Facial e Estética Avançada em SP",
+    default: "Harmonização Facial em São Paulo · Da Vinci Aesthetic",
     template: "%s · Da Vinci Aesthetic",
   },
   description:
-    "Clínica de harmonização facial e estética avançada em São Paulo. Toxina botulínica, preenchimento e bioestimuladores com avaliação facial completa. Dra. Ana Carolina Martins, biomédica esteta.",
+    "Clínica de harmonização facial e estética avançada em São Paulo. Toxina botulínica, preenchimento, bioestimuladores e skinboosters com avaliação facial completa. Dra. Ana Carolina Martins, biomédica esteta.",
   keywords: [
     "harmonização facial São Paulo",
+    "harmonização facial",
     "preenchimento facial",
+    "preenchimento labial",
     "toxina botulínica",
-    "leitura facial",
-    "estética avançada",
+    "botox São Paulo",
+    "bioestimulador de colágeno",
     "skinboosters",
-    "Da Vinci Aesthetic",
+    "estética avançada São Paulo",
+    "clínica de estética Vila Mariana",
     "biomédica esteta SP",
+    "Da Vinci Aesthetic",
   ],
   authors: [{ name: "Da Vinci Aesthetic" }],
+  creator: "Da Vinci Aesthetic",
+  category: "Health & Beauty",
   openGraph: {
     type: "website",
     locale: "pt_BR",
     url: SITE_URL,
     siteName: "Da Vinci Aesthetic",
-    title: "Da Vinci Aesthetic · A Arte do Refinamento",
+    title: "Da Vinci Aesthetic · Harmonização Facial em São Paulo",
     description:
       "Harmonização facial com leitura de conjunto. Realce a sua beleza natural, com técnica e segurança.",
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "Da Vinci Aesthetic" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Da Vinci Aesthetic · Harmonização Facial em São Paulo",
+    description:
+      "Estética avançada e harmonização facial. Realce a sua beleza natural, com técnica e segurança.",
+    images: [OG_IMAGE],
   },
   alternates: { canonical: SITE_URL },
-  robots: { index: true, follow: true },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large" },
+  },
   icons: {
     icon: [{ url: "/favicon.png", type: "image/png" }],
     apple: "/favicon.png",
@@ -60,27 +77,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const jsonLd = {
+  const graph = {
     "@context": "https://schema.org",
-    "@type": "MedicalBusiness",
-    name: "Da Vinci Aesthetic",
-    description:
-      "Clínica de estética avançada e harmonização facial em São Paulo.",
-    image: `${SITE_URL}/brand/logos/davinci-dourado.png`,
-    url: SITE_URL,
-    areaServed: ["Conceição", "Santa Cruz", "Vila Mariana", "São Paulo"],
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "São Paulo",
-      addressRegion: "SP",
-      addressCountry: "BR",
-    },
-    medicalSpecialty: "Aesthetic",
-    founder: {
-      "@type": "Person",
-      name: "Dra. Ana Carolina Martins",
-      jobTitle: "Biomédica Esteta",
-    },
+    "@graph": [clinicJsonLd(), websiteJsonLd()],
   };
 
   return (
@@ -88,7 +87,7 @@ export default function RootLayout({
       <body>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }}
         />
         {children}
       </body>

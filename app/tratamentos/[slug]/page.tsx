@@ -7,6 +7,7 @@ import WhatsAppFab from "@/components/WhatsAppFab";
 import { Footer } from "@/components/Sections";
 import Reveal from "@/components/Reveal";
 import { PROTOCOLOS, getProtocolo, whatsappHref } from "@/lib/content";
+import { SITE_URL, OG_IMAGE, PROC_KEYWORDS } from "@/lib/seo";
 
 export function generateStaticParams() {
   return PROTOCOLOS.map((p) => ({ slug: p.slug }));
@@ -20,16 +21,24 @@ export async function generateMetadata({
   const { slug } = await params;
   const p = getProtocolo(slug);
   if (!p) return {};
-  const url = `https://davinciestetica.com.br/tratamentos/${p.slug}`;
+  const url = `${SITE_URL}/tratamentos/${p.slug}`;
   return {
     title: `${p.title} em São Paulo`,
     description: p.seoDesc,
+    keywords: PROC_KEYWORDS[p.slug],
     alternates: { canonical: url },
     openGraph: {
       title: `${p.title} · Da Vinci Aesthetic`,
       description: p.seoDesc,
       url,
       type: "article",
+      images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: p.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${p.title} · Da Vinci Aesthetic`,
+      description: p.seoDesc,
+      images: [OG_IMAGE],
     },
   };
 }
@@ -45,14 +54,37 @@ export default async function TratamentoPage({
 
   const outros = PROTOCOLOS.filter((x) => x.slug !== p.slug).slice(0, 4);
 
-  const faqLd = {
+  const url = `${SITE_URL}/tratamentos/${p.slug}`;
+  const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: p.faq.map((f) => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
+    "@graph": [
+      {
+        "@type": "MedicalProcedure",
+        name: p.title,
+        description: p.seoDesc,
+        url,
+        procedureType: "https://schema.org/NoninvasiveProcedure",
+        bodyLocation: "Face",
+        provider: { "@id": `${SITE_URL}/#clinica` },
+        howPerformed: p.etapas.map((e) => `${e.t}: ${e.d}`).join(" "),
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Início", item: SITE_URL },
+          { "@type": "ListItem", position: 2, name: "Tratamentos", item: `${SITE_URL}/#protocolos` },
+          { "@type": "ListItem", position: 3, name: p.title, item: url },
+        ],
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: p.faq.map((f) => ({
+          "@type": "Question",
+          name: f.q,
+          acceptedAnswer: { "@type": "Answer", text: f.a },
+        })),
+      },
+    ],
   };
 
   return (
@@ -60,7 +92,7 @@ export default async function TratamentoPage({
       <Header />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
       <main>
