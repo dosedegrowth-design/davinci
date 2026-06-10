@@ -98,8 +98,7 @@ export default function ResultadosCarousel() {
                     fill
                     sizes="(max-width:768px) 74vw, 26vw"
                     className="object-cover"
-                    priority={idx < 3}
-                    loading={idx < 3 ? undefined : "lazy"}
+                    loading="lazy"
                   />
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[var(--color-night)]/55 via-transparent to-transparent" />
                 </div>

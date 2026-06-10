@@ -21,6 +21,7 @@ export default function Hero() {
           muted
           loop
           playsInline
+          preload="auto"
           poster="/brand/video/davinci-hero-poster.jpg"
           className="h-[72vmin] w-[72vmin] object-contain [mask-image:radial-gradient(farthest-side_at_center,#000_90%,transparent_100%)] [-webkit-mask-image:radial-gradient(farthest-side_at_center,#000_90%,transparent_100%)]"
         >
