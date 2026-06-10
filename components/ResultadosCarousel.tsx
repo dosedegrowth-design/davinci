@@ -11,7 +11,30 @@ export default function ResultadosCarousel() {
   const [i, setI] = useState(0);
   const [anim, setAnim] = useState(true);
   const [paused, setPaused] = useState(false);
+  const [active, setActive] = useState(false);
   const dragX = useRef<number | null>(null);
+  const rootRef = useRef<HTMLDivElement | null>(null);
+
+  // carrega as fotos assim que o carrossel se aproxima da tela (não compete com o hero)
+  useEffect(() => {
+    const el = rootRef.current;
+    if (!el) return;
+    if (!("IntersectionObserver" in window)) {
+      setActive(true);
+      return;
+    }
+    const io = new IntersectionObserver(
+      ([e]) => {
+        if (e.isIntersecting) {
+          setActive(true);
+          io.disconnect();
+        }
+      },
+      { rootMargin: "800px 0px" }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
 
   // autoplay
   useEffect(() => {
@@ -50,6 +73,7 @@ export default function ResultadosCarousel() {
 
   return (
     <div
+      ref={rootRef}
       className="coverflow relative left-1/2 w-screen -translate-x-1/2 select-none py-6"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
@@ -98,7 +122,7 @@ export default function ResultadosCarousel() {
                     fill
                     sizes="(max-width:768px) 74vw, 26vw"
                     className="object-cover"
-                    loading="lazy"
+                    loading={active ? "eager" : "lazy"}
                   />
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[var(--color-night)]/55 via-transparent to-transparent" />
                 </div>
