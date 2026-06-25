@@ -3,7 +3,7 @@
 // ============================================================
 import { PROTOCOLOS, INSTAGRAM } from "./content";
 
-export const SITE_URL = "https://davinciestetica.com.br";
+export const SITE_URL = "https://clinicadavinciaesthetic.com.br";
 export const SITE_NAME = "Da Vinci Aesthetic";
 export const OG_IMAGE = `${SITE_URL}/og.jpg`;
 

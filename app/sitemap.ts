@@ -1,7 +1,6 @@
 import type { MetadataRoute } from "next";
 import { PROTOCOLOS } from "@/lib/content";
-
-const BASE = "https://davinciestetica.com.br";
+import { SITE_URL as BASE } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const last = new Date("2026-06-09");
