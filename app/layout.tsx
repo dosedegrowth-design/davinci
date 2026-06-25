@@ -1,7 +1,14 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Jost } from "next/font/google";
 import "./globals.css";
 import { SITE_URL, OG_IMAGE, clinicJsonLd, websiteJsonLd } from "@/lib/seo";
+
+export const viewport: Viewport = {
+  themeColor: "#1a2438",
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -67,8 +74,12 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true, "max-image-preview": "large" },
   },
   icons: {
-    icon: [{ url: "/favicon.png", type: "image/png" }],
-    apple: "/favicon.png",
+    icon: [
+      { url: "/favicon.png?v=2", type: "image/png", sizes: "256x256" },
+      { url: "/icon-512.png?v=2", type: "image/png", sizes: "512x512" },
+    ],
+    apple: "/apple-touch-icon.png?v=2",
+    shortcut: "/favicon.png?v=2",
   },
 };
 
