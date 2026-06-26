@@ -3,14 +3,17 @@
 // Fonte: Brand Manual Vol.01 + Planejamento Estratégico DG
 // ============================================================
 
-// ⚠️ Substituir pelo WhatsApp oficial da clínica antes de publicar.
-// (o número do planejamento é da coordenação DG, não da Da Vinci)
-export const WHATSAPP_NUMBER = "5511000000000";
+// WhatsApp oficial da Da Vinci Aesthetic
+export const WHATSAPP_NUMBER = "5511945888598";
 export const WHATSAPP_MSG =
-  "Olá! Gostaria de agendar minha avaliação facial na Da Vinci Aesthetic.";
+  "Olá! Vim pelo site da Da Vinci Aesthetic e gostaria de agendar minha avaliação facial.";
 export const whatsappHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
   WHATSAPP_MSG
 )}`;
+
+// link com mensagem personalizada (ex.: contextual por tratamento)
+export const whatsappLink = (msg?: string) =>
+  `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg ?? WHATSAPP_MSG)}`;
 
 export const INSTAGRAM = "https://instagram.com/davinci.aesthetic";
 export const INSTAGRAM_HANDLE = "@davinci.aesthetic";

@@ -6,7 +6,7 @@ import Header from "@/components/Header";
 import WhatsAppFab from "@/components/WhatsAppFab";
 import { Footer } from "@/components/Sections";
 import Reveal from "@/components/Reveal";
-import { PROTOCOLOS, getProtocolo, whatsappHref } from "@/lib/content";
+import { PROTOCOLOS, getProtocolo, whatsappLink } from "@/lib/content";
 import { SITE_URL, OG_IMAGE, PROC_KEYWORDS } from "@/lib/seo";
 
 export function generateStaticParams() {
@@ -87,6 +87,10 @@ export default async function TratamentoPage({
     ],
   };
 
+  const zap = whatsappLink(
+    `Olá! Vim pelo site da Da Vinci Aesthetic e tenho interesse em ${p.title}. Gostaria de agendar uma avaliação.`
+  );
+
   return (
     <>
       <Header />
@@ -122,7 +126,7 @@ export default async function TratamentoPage({
                   {p.intro[0]}
                 </p>
                 <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-                  <a href={whatsappHref} target="_blank" rel="noopener noreferrer" className="btn-gold justify-center">
+                  <a href={zap} target="_blank" rel="noopener noreferrer" className="btn-gold justify-center">
                     Agende sua avaliação
                   </a>
                   <Link href="/#protocolos" className="btn-ghost justify-center">
@@ -189,7 +193,7 @@ export default async function TratamentoPage({
                   ))}
                 </ul>
 
-                <a href={whatsappHref} target="_blank" rel="noopener noreferrer" className="btn-gold mt-9 w-full justify-center">
+                <a href={zap} target="_blank" rel="noopener noreferrer" className="btn-gold mt-9 w-full justify-center">
                   Falar sobre {p.title.toLowerCase()}
                 </a>
               </div>
@@ -229,7 +233,7 @@ export default async function TratamentoPage({
               <p className="mx-auto mt-6 max-w-xl leading-relaxed text-[var(--color-cream-dim)]">
                 A avaliação facial é o primeiro passo, sem pressão e sem venda agressiva. Uma conversa técnica sobre o que faz sentido para você.
               </p>
-              <a href={whatsappHref} target="_blank" rel="noopener noreferrer" className="btn-gold mt-9 justify-center">
+              <a href={zap} target="_blank" rel="noopener noreferrer" className="btn-gold mt-9 justify-center">
                 Agende sua avaliação
               </a>
             </Reveal>
